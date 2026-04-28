@@ -329,6 +329,13 @@ public class SendPictureActivity extends Activity   {
     }
 
 
+    public void onMotionClick(View view) {
+        String url = "https://maky.ddns.net/privat/scripts/motions.php";
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
+    }
+
+
     public void uploadFoto() {
         /*
         Intent intent = new Intent(SendPictureActivity.this, SendPictureActivity.class);

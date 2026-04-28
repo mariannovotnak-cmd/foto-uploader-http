@@ -129,7 +129,7 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="5dp"
         android:background="#FFF085"
-        android:onClick="onFondyClick"
+        android:onClick="onMotionClick"
         android:text="Pohyby"
         android:visibility="visible" />
 </RelativeLayout>
