@@ -4,4 +4,6 @@
     <string name="nazov_okna">Maky foto uploader</string>
     <string name="action_settings">Nastavenia</string>
     <string name="default_notification_channel_id">makyKanal</string>
+    <string name="exit">Exit</string>
+    <string name="geleria">Galéria</string>
 </resources>

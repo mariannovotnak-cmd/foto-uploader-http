@@ -82,7 +82,7 @@
         android:background="#A3F44336"
         android:layout_margin="5dp"
         android:onClick="onExitClick"
-        android:text="Exit"
+        android:text="@string/exit"
         android:visibility="visible" />
 
     <Button
@@ -94,7 +94,7 @@
         android:background="#5DFF9800"
         android:layout_margin="5dp"
         android:onClick="onGaleriaClick"
-        android:text="Galéria"
+        android:text="@string/geleria"
         android:visibility="visible" />
 
     <Button
