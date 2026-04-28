@@ -325,6 +325,7 @@ public class SendPictureActivity extends Activity   {
 
 
     public void onMotionClick(View view) {
+        // doplnene
         String url = "https://maky.ddns.net/privat/scripts/motions.php";
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(intent);
