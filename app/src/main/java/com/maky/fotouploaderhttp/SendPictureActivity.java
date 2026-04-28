@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.PowerManager;
@@ -31,15 +30,11 @@ import com.maky.fotouploader.R;
 //import com.maky.gpxuploader.R;
 
 import java.io.File;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
-import android.location.Location;
-import android.location.LocationManager;
 
 
 public class SendPictureActivity extends Activity   {
@@ -60,7 +55,7 @@ public class SendPictureActivity extends Activity   {
     TextView poznamkaLabel;
     ProgressBar pb;
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
-    private static String[] PERMISSIONS_STORAGE = {
+    private static final String[] PERMISSIONS_STORAGE = {
             Manifest.permission.READ_MEDIA_IMAGES,
             Manifest.permission.READ_EXTERNAL_STORAGE
     };
@@ -88,14 +83,14 @@ public class SendPictureActivity extends Activity   {
         this.setTitle("Maky foto uploader");
         setContentView(R.layout.activity_upload);
 
-        uploadButton =  (Button) findViewById(R.id.button);
+        uploadButton =  findViewById(R.id.button);
         uploadButton.setVisibility(View.INVISIBLE);
-        exitButton =  (Button) findViewById(R.id.buttonExit);
+        exitButton =  findViewById(R.id.buttonExit);
         exitButton.setVisibility(View.VISIBLE);
 
-        poznamkaLabel =  (TextView) findViewById(R.id.textMsgLabel);
-        textVystup =  (TextView) findViewById(R.id.textVystup);
-        pb = (ProgressBar) findViewById(R.id.progressBanner);
+        poznamkaLabel =  findViewById(R.id.textMsgLabel);
+        textVystup =  findViewById(R.id.textVystup);
+        pb = findViewById(R.id.progressBanner);
 
 
         // Get intent, action and MIME type
