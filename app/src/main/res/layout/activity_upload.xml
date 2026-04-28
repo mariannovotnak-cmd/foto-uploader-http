@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.maky.fotouploaderhttp.SendPictureActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#C78BC34A"
+        android:focusableInTouchMode="false"
+        android:onClick="onUploadClick"
+        android:text="Upload foto" />
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBanner"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_below="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp" />
+    <TextView
+        android:id="@+id/progressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBanner"
+        android:layout_alignParentLeft="true"
+        android:text="Stav"
+        android:textAlignment="center"
+        android:paddingLeft="10dp"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/progressFileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBanner"
+        android:layout_alignParentRight="true"
+        android:text="File name"
+        android:textAlignment="center"
+        android:paddingRight="10dp"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textMsgLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="17dp"
+        android:textAlignment="center"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/textVystup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textMsgLabel"
+        android:layout_alignParentLeft="true"
+        android:text="Stav:"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/buttonExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textVystup"
+        android:layout_centerHorizontal="true"
+        android:background="#A3F44336"
+        android:layout_margin="5dp"
+        android:onClick="onExitClick"
+        android:text="Exit"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonGaleria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonExit"
+        android:layout_centerHorizontal="true"
+        android:background="#5DFF9800"
+        android:layout_margin="5dp"
+        android:onClick="onGaleriaClick"
+        android:text="Galéria"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonDaikin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonGaleria"
+        android:layout_centerHorizontal="true"
+        android:background="#5E00BCD4"
+        android:layout_margin="5dp"
+        android:onClick="onDaikinClick"
+        android:text="Daikin"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonFondy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonDaikin"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="#4B9C27B0"
+        android:onClick="onFondyClick"
+        android:text="Fondy"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonMotion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonFondy"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="#FFF085"
+        android:onClick="onFondyClick"
+        android:text="Pohyby"
+        android:visibility="visible" />
+</RelativeLayout>

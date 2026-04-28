@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "145602907305",
+    "project_id": "fotouploader-e378e",
+    "storage_bucket": "fotouploader-e378e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145602907305:android:9a1525e4add4c28c96edb8",
+        "android_client_info": {
+          "package_name": "com.maky.fotouploaderhttp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1i2kdrH21unoihxm4_Lrg6CIbx2Ae4yA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

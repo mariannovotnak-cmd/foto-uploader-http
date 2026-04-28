@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Maky uploader</string>
+    <string name="nazov_okna">Maky foto uploader</string>
+    <string name="action_settings">Nastavenia</string>
+    <string name="default_notification_channel_id">makyKanal</string>
+</resources>
