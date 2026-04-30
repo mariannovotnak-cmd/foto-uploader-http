@@ -83,7 +83,7 @@ public class SendPictureActivity extends Activity   {
         this.setTitle("Maky foto uploader");
         setContentView(R.layout.activity_upload);
 
-        uploadButton =  findViewById(R.id.button);
+        uploadButton =  findViewById(R.id.buttonUpload);
         uploadButton.setVisibility(View.INVISIBLE);
         exitButton =  findViewById(R.id.buttonExit);
         exitButton.setVisibility(View.VISIBLE);

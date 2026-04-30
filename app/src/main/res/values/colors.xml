@@ -2,4 +2,26 @@
     <color name="scanner_line">#f5c405</color>
     <color name="cervena">#ff3399</color>
     <color name="ic_launcher_hviezda_background">#5A4B06</color>
+
+
+       <!-- Primary actions -->
+        <color name="green_primary">#4CAF50</color>
+        <color name="green_primary_dark">#388E3C</color>
+
+        <color name="red_primary">#F44336</color>
+        <color name="red_primary_dark">#D32F2F</color>
+
+        <!-- Secondary palette (jemné odtiene) -->
+        <color name="orange_soft">#FFB74D</color>
+        <color name="blue_soft">#64B5F6</color>
+        <color name="purple_soft">#BA68C8</color>
+        <color name="teal_soft">#4DB6AC</color>
+        <color name="amber_soft">#FFD54F</color>
+
+        <!-- Text -->
+        <color name="white">#FFFFFF</color>
+
+
+
+
 </resources>
