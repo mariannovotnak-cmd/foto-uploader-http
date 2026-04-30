@@ -60,7 +60,7 @@ public class SendPictureActivity extends Activity   {
             Manifest.permission.READ_EXTERNAL_STORAGE
     };
 
-    private static String[] PERMISSIONS_STORAGE_2 = {
+    private static final String[] PERMISSIONS_STORAGE_2 = {
             Manifest.permission.ACCESS_MEDIA_LOCATION,
             Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.ACCESS_COARSE_LOCATION
@@ -140,7 +140,7 @@ public class SendPictureActivity extends Activity   {
             guid = settingsRe.getString("guid", "");
             token = settingsRe.getString("token", "");
 
-            if (guid == ""){
+            if (guid.isEmpty()){
                 SharedPreferences.Editor editor = settingsRe.edit();
                 guid = java.util.UUID.randomUUID().toString();
                 editor.putString("guid",guid );
@@ -189,7 +189,7 @@ public class SendPictureActivity extends Activity   {
     public void RegistrujToken(String login){
 
 
-        if(login != "noname") {
+        if(!login.equals("noname")) {
 
             if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1) {
                 String pkg = getPackageName();
@@ -269,18 +269,18 @@ public class SendPictureActivity extends Activity   {
 
         File[] subory = new File[fileNames.length];
 
-        if (fileNames != null){
 
-            for (int i = 0; i < fileNames.length; i++) {
-                subory[i] = new File(fileNames[i]);
-            }
 
-            uploadButton.setVisibility(View.INVISIBLE);
-            exitButton.setVisibility(View.INVISIBLE);
+        for (int i = 0; i < fileNames.length; i++) {
+            subory[i] = new File(fileNames[i]);
+        }
 
-            ExecutorService executor = Executors.newSingleThreadExecutor();
+        uploadButton.setVisibility(View.INVISIBLE);
+        exitButton.setVisibility(View.INVISIBLE);
 
-            executor.execute(() -> {
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+
+        executor.execute(() -> {
                 AsyncCallWS asc = new AsyncCallWS(subory, this);
 
                 // sem daj logiku z doInBackground()
@@ -290,9 +290,7 @@ public class SendPictureActivity extends Activity   {
                     // sem daj logiku z onPostExecute()
                     asc.onPostExecute(null);
                 });
-            });
-
-        }
+        });
     }
 
     public void onExitClick(View view) {
@@ -325,8 +323,14 @@ public class SendPictureActivity extends Activity   {
 
 
     public void onMotionClick(View view) {
-        // doplnene
         String url = "https://maky.ddns.net/privat/scripts/motions.php";
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
+    }
+
+
+    public void onMailClick(View view) {
+        String url = "https://maky.ddns.net/privat/mail/imap.php";
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(intent);
     }
@@ -408,21 +412,21 @@ public class SendPictureActivity extends Activity   {
 
 
     public void setVystup(String data){
-        TextView tvvystup = (TextView) findViewById(R.id.textVystup);
+        TextView tvvystup = findViewById(R.id.textVystup);
         tvvystup.setText(data);
     }
     public void addVystup(String data){
-        TextView tvvystup = (TextView) findViewById(R.id.textVystup);
+        TextView tvvystup = findViewById(R.id.textVystup);
         tvvystup.append(data + System.getProperty("line.separator"));
     }
     public void setProgressStatus(int progress){
-        pb = (ProgressBar) findViewById(R.id.progressBanner);
-        TextView pt = (TextView) findViewById(R.id.progressText);
+        pb = findViewById(R.id.progressBanner);
+        TextView pt = findViewById(R.id.progressText);
         pb.setProgress(progress);
         pt.setText(Math.round(pb.getProgress() * 100 / pb.getMax()) + " %");
     }
     public void setProgressText(String text){
-        TextView pt = (TextView) findViewById(R.id.progressFileName);
+        TextView pt = findViewById(R.id.progressFileName);
         pt.setText(text);
     }
 
